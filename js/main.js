@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (taskEvent && hourTask.text != '') {
                 removingClass(warningMessage, 'active');
-                taskEvent.innerHTML = `<div class="main__table-box filled ${hourTask.person}"> ${hourTask.text} <img class="delete-event" src="../images/close-box.svg" alt="close icon"> 
+                taskEvent.innerHTML = `<div class="main__table-box filled ${hourTask.person}"> ${hourTask.text} <img class="delete-event" src="images/close-box.svg" alt="close icon"> 
                     </div>`;
                 changeVisibility(mainForm, eventSection, 'active');
 
