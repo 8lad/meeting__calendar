@@ -1,180 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Meeting calendar</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image.png">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrapper">
-      <div class="content">
-        <div class="main">
-          <div class="main__inner active">
-            <div class="main__form">
-              <div class="main__form-title">Calendar</div>
-              <div class="main__form-btns">
-                <fieldset>
-                  <div class="select">
-                    <select class="main__form-member" name="member">
-                      <option value="All">All members</option>
-                      <option value="Maria">Maria</option>
-                      <option value="Bob">Bob</option>
-                      <option value="Alex">Alex</option>
-                    </select>
-                  </div>
-                  <button class="main__form-event">New event +</button>
-                </fieldset>
-              </div>
+        <div class="content">
+            <div class="main">
+                <div class="main__inner active">
+                    <div class="main__form">
+                        <div class="main__form-title">Calendar</div>
+                        <div class="main__form-btns">
+                            <fieldset>
+                                <div class="select">
+                                    <select class="main__form-member" name="member">
+                    <option value="All">All members</option>
+                    <option value="Maria">Maria</option>
+                    <option value="Bob">Bob</option>
+                    <option value="Alex">Alex</option>
+                  </select>
+                                </div>
+                                <button class="main__form-event">New event +</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <table class="main__table">
+                        <tr>
+                            <th>Name</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                        </tr>
+                        <tr>
+                            <td>10:00</td>
+                            <td data-mon="10"></td>
+                            <td data-tue="10"></td>
+                            <td data-wed="10"></td>
+                            <td data-thu="10"></td>
+                            <td data-fri="10"></td>
+                        </tr>
+                        <tr>
+                            <td>11:00</td>
+                            <td data-mon="11"></td>
+                            <td data-tue="11"></td>
+                            <td data-wed="11"></td>
+                            <td data-thu="11"></td>
+                            <td data-fri="11"></td>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                            <td data-mon="12"></td>
+                            <td data-tue="12"></td>
+                            <td data-wed="12"></td>
+                            <td data-thu="12"></td>
+                            <td data-fri="12"></td>
+                        </tr>
+                        <tr>
+                            <td>13:00</td>
+                            <td data-mon="13"></td>
+                            <td data-tue="13"></td>
+                            <td data-wed="13"></td>
+                            <td data-thu="13"></td>
+                            <td data-fri="13"></td>
+                        </tr>
+                        <tr>
+                            <td>14:00</td>
+                            <td data-mon="14"></td>
+                            <td data-tue="14"></td>
+                            <td data-wed="14"></td>
+                            <td data-thu="14"></td>
+                            <td data-fri="14"></td>
+                        </tr>
+                        <tr>
+                            <td>15:00</td>
+                            <td data-mon="15"></td>
+                            <td data-tue="15"></td>
+                            <td data-wed="15"></td>
+                            <td data-thu="15"></td>
+                            <td data-fri="15"></td>
+                        </tr>
+                        <tr>
+                            <td>16:00</td>
+                            <td data-mon="16"></td>
+                            <td data-tue="16"></td>
+                            <td data-wed="16"></td>
+                            <td data-thu="16"></td>
+                            <td data-fri="16"></td>
+                        </tr>
+                        <tr>
+                            <td>17:00</td>
+                            <td data-mon="17"></td>
+                            <td data-tue="17"></td>
+                            <td data-wed="17"></td>
+                            <td data-thu="17"></td>
+                            <td data-fri="17"></td>
+                        </tr>
+                        <tr>
+                            <td>18:00</td>
+                            <td data-mon="18"></td>
+                            <td data-tue="18"></td>
+                            <td data-wed="18"></td>
+                            <td data-thu="18"></td>
+                            <td data-fri="18"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="delete">
+                    <div class="delete__title">Are you sure you want to delete <span class="delete__title-value"></span>event?
+                    </div>
+                    <div class="delete__btns">
+                        <button class="delete__no">No</button>
+                        <button class="delete__yes">Yes</button>
+                    </div>
+                </div>
+                <section class="event">
+                    <form class="event__form">
+                        <fieldset>
+                            <div class="event__error"><img class="event__warning" src="images/warning.svg" alt="warning icon">
+                                <p>Failed to create an event. Time slot is already booked.</p><img class="event__close" src="images/close.svg" alt="close icon">
+                            </div>
+                            <div class="event__inputs">
+                                <label for="descr">Name of the event:</label>
+                                <input class="event__descr" type="text" name="descr">
+                                <label for="person">Participants:</label>
+                                <div class="select event__select">
+                                    <select class="event__name" name="person">
+                    <option value="All">Maria, Bob, Alex</option>
+                    <option value="Maria">Maria</option>
+                    <option value="Bob">Bob</option>
+                    <option value="Alex">Alex</option>
+                  </select>
+                                </div>
+                                <label for="day">Day:</label>
+                                <div class="select event__select">
+                                    <select class="event__day" name="day">
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                  </select>
+                                </div>
+                                <label for="time">Time:</label>
+                                <div class="select event__select">
+                                    <select class="event__time" name="time">
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                  </select>
+                                </div>
+                            </div>
+                            <div class="event__btns">
+                                <button class="event__btn event__cancel">Cancel</button>
+                                <button class="event__btn event__create">Create</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
             </div>
-            <table class="main__table">
-              <tr>
-                <th>Name</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-              </tr>
-              <tr>
-                <td>10:00</td>
-                <td data-mon="10"></td>
-                <td data-tue="10"></td>
-                <td data-wed="10"></td>
-                <td data-thu="10"></td>
-                <td data-fri="10"></td>
-              </tr>
-              <tr>
-                <td>11:00</td>
-                <td data-mon="11"></td>
-                <td data-tue="11"></td>
-                <td data-wed="11"></td>
-                <td data-thu="11"></td>
-                <td data-fri="11"></td>
-              </tr>
-              <tr>
-                <td>12:00</td>
-                <td data-mon="12"></td>
-                <td data-tue="12"></td>
-                <td data-wed="12"></td>
-                <td data-thu="12"></td>
-                <td data-fri="12"></td>
-              </tr>
-              <tr>
-                <td>13:00</td>
-                <td data-mon="13"></td>
-                <td data-tue="13"></td>
-                <td data-wed="13"></td>
-                <td data-thu="13"></td>
-                <td data-fri="13"></td>
-              </tr>
-              <tr>
-                <td>14:00</td>
-                <td data-mon="14"></td>
-                <td data-tue="14"></td>
-                <td data-wed="14"></td>
-                <td data-thu="14"></td>
-                <td data-fri="14"></td>
-              </tr>
-              <tr>
-                <td>15:00</td>
-                <td data-mon="15"></td>
-                <td data-tue="15"></td>
-                <td data-wed="15"></td>
-                <td data-thu="15"></td>
-                <td data-fri="15"></td>
-              </tr>
-              <tr>
-                <td>16:00</td>
-                <td data-mon="16"></td>
-                <td data-tue="16"></td>
-                <td data-wed="16"></td>
-                <td data-thu="16"></td>
-                <td data-fri="16"></td>
-              </tr>
-              <tr>
-                <td>17:00</td>
-                <td data-mon="17"></td>
-                <td data-tue="17"></td>
-                <td data-wed="17"></td>
-                <td data-thu="17"></td>
-                <td data-fri="17"></td>
-              </tr>
-              <tr>
-                <td>18:00</td>
-                <td data-mon="18"></td>
-                <td data-tue="18"></td>
-                <td data-wed="18"></td>
-                <td data-thu="18"></td>
-                <td data-fri="18"></td>
-              </tr>
-            </table>
-          </div>
-          <div class="delete">
-            <div class="delete__title">Are you sure you want to delete <span class="delete__title-value"></span>event?</div>
-            <div class="delete__btns">
-              <button class="delete__no">No</button>
-              <button class="delete__yes">Yes</button>
-            </div>
-          </div>
-          <section class="event">
-            <form class="event__form">
-              <fieldset>
-                <div class="event__error"><img class="event__warning" src="images/warning.svg" alt="warning icon">
-                  <p>Failed to create an event. Time slot is already booked.</p><img class="event__close" src="images/close.svg" alt="close icon">
-                </div>
-                <div class="event__inputs">
-                  <label for="descr">Name of the event:</label>
-                  <input class="event__descr" type="text" name="descr">
-                  <label for="person">Participants:</label>
-                  <div class="select event__select">
-                    <select class="event__name" name="person">
-                      <option value="All">Maria, Bob, Alex</option>
-                      <option value="Maria">Maria</option>
-                      <option value="Bob">Bob</option>
-                      <option value="Alex">Alex</option>
-                    </select>
-                  </div>
-                  <label for="day">Day:</label>
-                  <div class="select event__select">
-                    <select class="event__day" name="day">
-                      <option value="mon">Monday</option>
-                      <option value="tue">Tuesday</option>
-                      <option value="wed">Wednesday</option>
-                      <option value="thu">Thursday</option>
-                      <option value="fri">Friday</option>
-                    </select>
-                  </div>
-                  <label for="time">Time:</label>
-                  <div class="select event__select">
-                    <select class="event__time" name="time">
-                      <option value="10">10:00</option>
-                      <option value="11">11:00</option>
-                      <option value="12">12:00</option>
-                      <option value="13">13:00</option>
-                      <option value="14">14:00</option>
-                      <option value="15">15:00</option>
-                      <option value="16">16:00</option>
-                      <option value="17">17:00</option>
-                      <option value="18">18:00</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="event__btns">
-                  <button class="event__btn event__cancel">Cancel</button>
-                  <button class="event__btn event__create">Create</button>
-                </div>
-              </fieldset>
-            </form>
-          </section>
         </div>
-      </div>
-      <div class="footer"></div>
+        <div class="footer"></div>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
